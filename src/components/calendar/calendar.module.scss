@@ -1,0 +1,45 @@
+@import "../../packages/styles/background.scss";
+@import "../../packages/styles/colors.scss";
+@import "../../packages/styles/font.scss";
+@import "../../packages/styles/font-family.scss";
+
+.calendar {
+    display: grid;
+    grid-template: 0.5fr 0.5fr 0.5fr 0.5fr / 1fr;
+    grid-template-areas:
+        "monthYear"
+        "daysName"
+        "days"
+        "darkLightMode";
+    background: $calendarBackgroundDark;
+    color: $white;
+    width: 20%;
+    border-radius: 4%;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: $fw500;
+    font-family: $baseFontFamily;
+}
+
+.monthYear {
+    display: grid;
+    grid-area: monthYear;
+}
+
+.daysName {
+    display: grid;
+    grid-area: daysName;
+}
+
+.days {
+    display: grid;
+    grid-area: days;
+    grid-template: 1fr / 1fr;
+}
+
+.darkLightMode {
+    display: grid;
+    grid-area: darkLightMode;
+    grid-template: 1fr / 1fr;
+}

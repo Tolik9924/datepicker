@@ -1,0 +1,17 @@
+@import "../../../packages/styles/colors.scss";
+@import "../../../packages/styles/font.scss";
+
+.monthYear {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    justify-content: space-between;
+    color: $white;
+    font-size: $f30;
+    margin-top: 8%;
+    text-align: center;
+}
+
+.arrow {
+    font-size: $f24;
+    padding: 0px 5px;
+}

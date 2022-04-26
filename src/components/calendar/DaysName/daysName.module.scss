@@ -1,0 +1,13 @@
+@import "../../../packages/styles/colors.scss";
+@import "../../../packages/styles/font.scss";
+
+.daysName {
+    display: grid;
+    grid-template: 1fr /  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.dayName {
+    margin-top: 30px;
+    font-size: $f18;
+    color: $grey;
+}
