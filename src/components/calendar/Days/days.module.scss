@@ -1,11 +1,4 @@
-@import "../../../packages/styles/font.scss";
-
 .days {
     display: grid;
     grid-template: 1fr /  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-
-.day {
-    font-size: $f20;
-    margin-top: 30px;
 }

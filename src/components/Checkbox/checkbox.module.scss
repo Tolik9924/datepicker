@@ -1,0 +1,44 @@
+.chs {
+	height: 0px;
+	width: 0px;
+	visibility: hidden;
+
+    &:checked + .toggle {
+        background: #bada55;
+    }
+
+    &:checked + .toggle:after {
+        left: calc(100%);
+        transform: translateX(-100%);
+    }
+}
+
+.toggle {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 50px;
+	height: 25px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+    margin: 0% 0% 0% 75%;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        width: 23px;
+        height: 23px;
+        background: #fff;
+        border-radius: 90px;
+        transition: 0.3s;
+    }
+
+}
+
+.span {
+    display: block;
+    margin: 0% -8% -10% 10%;
+}

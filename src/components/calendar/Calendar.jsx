@@ -1,4 +1,5 @@
 import React from 'react';
+import Checkbox from '../Checkbox/Checkbox';
 
 import style from './calendar.module.scss';
 import Days from './Days/Days';
@@ -12,7 +13,7 @@ const Calendar = () => {
             <div className={style.monthYear}><MonthYear /></div>
             <div className={style.daysName}><DaysName /></div>
             <div className={style.days}><Days /></div>
-            <div className={style.darkLightMode}>dark/light mode</div>
+            <div className={style.darkLightMode}><Checkbox span='dark/light mode' /></div>
         </div>
     );
 }
