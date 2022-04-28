@@ -1,4 +1,5 @@
-import React from 'react';
+import classNames from 'classnames';
+import React, { useState } from 'react';
 import Checkbox from '../Checkbox/Checkbox';
 
 import style from './calendar.module.scss';
@@ -8,13 +9,31 @@ import MonthYear from './MonthYear/MonthYear';
 
 const Calendar = () => {
 
+    const [darkLightMode, setDarkLightMode] = useState(false);
+
+    const mode = darkLightMode ? style.dark : style.light;
+
+    const classMode = classNames(style.calendar, mode);
+
+    const span =  darkLightMode ? 'Dark Mode' : 'Light Mode';
+
     return(
-        <div className={style.calendar}>
-            <div className={style.monthYear}><MonthYear /></div>
-            <div className={style.daysName}><DaysName /></div>
-            <div className={style.days}><Days /></div>
-            <div className={style.darkLightMode}><Checkbox span='dark/light mode' /></div>
-        </div>
+            <div className={classMode}>
+                <div className={style.monthYear}>
+                    <MonthYear darkLightMode={darkLightMode} />
+                </div>
+                <div className={style.daysName}>
+                    <DaysName darkLightMode={darkLightMode} />
+                </div>
+                <div className={style.days}>
+                    <Days darkLightMode={darkLightMode} />
+                </div>
+                <div className={style.darkLightMode}>
+                    <Checkbox span={span}
+                        onChange={() => setDarkLightMode(!darkLightMode)}
+                        darkLightMode={darkLightMode} />
+                </div>
+            </div>
     );
 }
 

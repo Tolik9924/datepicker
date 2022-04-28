@@ -11,6 +11,14 @@
     text-align: center;
 }
 
+.dark {
+    color: $white;
+}
+
+.light {
+    color: $black;
+}
+
 .arrow {
     font-size: $f24;
     padding: 0px 5px;

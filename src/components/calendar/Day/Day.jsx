@@ -6,10 +6,12 @@ import style from './day.module.scss';
 
 const Day = ({
     day,
-    chooseDay
+    chooseDay,
+    darkLightMode
 }) => {
 
-    const todayStyle = day.today && style.today;
+    const modeToday = darkLightMode ? style.todayDark : style.todayLight;
+    const todayStyle = day.today && modeToday;
     const chooseDayStyle = day.chooseDay && style.chooseDay;
 
     const classProps = classNames(style.day, todayStyle, chooseDayStyle);

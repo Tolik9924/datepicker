@@ -1,5 +1,6 @@
 @import "../../../packages/styles/font.scss";
 @import "../../../packages/styles/background.scss";
+@import "../../../packages/styles/colors.scss";
 
 .day {
     font-size: $f20;
@@ -10,8 +11,13 @@
     border: solid;
 }
 
-.today {
+.todayDark {
     background: $lightDarkBlue;
+    border-radius: 50%;
+}
+
+.todayLight {
+    background: $darkOrange;
     border-radius: 50%;
 }
 

@@ -1,5 +1,13 @@
 @import "./colors.scss";
 // Calendar
 $calendarBackgroundDark: $darkBlueColor;
-$calendarBackgroundLight: $white;
+$calendarBackgroundLight: $lightYellow;
 $todayBackground: $lightDarkBlue;
+
+// Button
+$primaryBackground: $blue;
+$successBackground: $green;
+
+// Border Button
+$primaryBorder: $blue;
+$successBorder: $green;

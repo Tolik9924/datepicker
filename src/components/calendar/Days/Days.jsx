@@ -5,7 +5,9 @@ import Day from '../Day/Day';
 
 import style from './days.module.scss';
 
-const Days = () => {
+const Days = ({
+    darkLightMode
+}) => {
 
     const dispatch = useDispatch();
 
@@ -22,7 +24,8 @@ const Days = () => {
             {days.map((day) => {
             return <Day key={day.id} 
                         day={day} 
-                        chooseDay={chooseDay} />
+                        chooseDay={chooseDay}
+                        darkLightMode={darkLightMode} />
         })}
         </div>
     );

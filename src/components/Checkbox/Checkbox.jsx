@@ -9,7 +9,12 @@ const Checkbox = ({
     checked,
     onChange,
     disabled = false,
+    darkLightMode
 }) => {
+    
+    const mode = darkLightMode ? style.toggleDark : style.toggleLight;
+
+    const classMode = classNames(style.toggle, mode)
 
     return (
         <div>
@@ -20,7 +25,7 @@ const Checkbox = ({
                     checked={checked}
                     onChange={onChange}
                     disabled={disabled} />
-                <label for="switch" className={style.toggle}>Toggle</label>
+                <label for="switch" className={classMode}>Toggle</label>
             </div>
     );
 }

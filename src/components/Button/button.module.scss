@@ -1,0 +1,111 @@
+@import "../../packages/styles/font.scss";
+@import "../../packages/styles/colors.scss";
+@import "../../packages/styles/background.scss";
+
+.button {
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    transition: all 150ms linear;
+    
+    &:hover {
+        border: 1px solid rgba(blue, .05);
+        box-shadow: 1px 1px 2px rgba(red, .2);
+        text-decoration: none;
+        transition: all 250ms linear;
+      }
+}
+
+.fullwidth {
+    width: 100%
+}
+
+// Size
+.small {
+    font-size: $f12;
+    font-weight: $fw600;
+    padding: 0.2em 2em;
+    line-height: 20px; 
+}
+
+.medium {
+    font-size: $f14;
+    font-weight: $fw700;
+    padding: 0.3em 3em;
+    line-height: 30px; 
+}
+
+.large {
+    font-size: $f18;
+    font-weight: $fw900;
+    padding: 0.35em 4em;
+    line-height: 40px; 
+}
+
+// Type Button
+.primary {
+    color: $white;
+    background: lighten($primaryBackground, 3%);  
+    border: 1px solid darken($primaryBorder, 2%);
+    box-shadow: 0px 2px 0 darken($primaryBackground, 5%), 2px 4px 6px darken($primaryBackground, 2%);
+
+    &:hover {
+        background: darken($primaryBackground, 1.5%);
+        color: lighten($primaryBackground, 18%);
+        text-shadow: -1px -1px 0 darken($primaryBackground, 9.5%); 
+    }
+
+    &:disabled {
+        color: $grey-darc-color;
+        background: $white;
+        border-color: $grey-light-color;
+        cursor: default;
+        text-shadow: -1px -1px 0 darken($grey-darc-color, 9.5%);
+        box-shadow: 0px 2px 0 darken($grey-darc-color, 5%), 2px 4px 6px darken($grey-darc-color, 2%);
+    }
+}
+
+.secondary {
+    color: $white;
+    background: lighten($red5, 3%);  
+    border: 1px solid darken($red5, 2%);
+    box-shadow: 0px 2px 0 darken($red5, 5%), 2px 4px 6px darken($red5, 2%);
+
+    &:hover {
+        background: darken($red5, 1.5%);
+        color: lighten($red5, 18%);
+        text-shadow: -1px -1px 0 darken($red5, 9.5%); 
+    }
+
+    &:disabled {
+        color: $grey-darc-color;
+        background: $white;
+        border-color: $grey-light-color;
+        cursor: default;
+        text-shadow: -1px -1px 0 darken($grey-darc-color, 9.5%);
+        box-shadow: 0px 2px 0 darken($grey-darc-color, 5%), 2px 4px 6px darken($grey-darc-color, 2%);
+    }
+}
+
+.success {
+    color: $white;
+    background: lighten($successBackground, 3%);  
+    border: 1px solid darken($successBorder, 2%);
+    box-shadow: 0px 2px 0 darken($successBackground, 5%), 2px 4px 6px darken($successBackground, 2%);
+
+    &:hover {
+        background: darken($successBackground, 1.5%);
+        color: lighten($successBackground, 18%);
+        text-shadow: -1px -1px 0 darken($successBackground, 9.5%); 
+    }
+
+    &:disabled {
+        color: $grey-darc-color;
+        background: $white;
+        border-color: $grey-light-color;
+        cursor: default;
+        text-shadow: -1px -1px 0 darken($grey-darc-color, 9.5%);
+        box-shadow: 0px 2px 0 darken($grey-darc-color, 5%), 2px 4px 6px darken($grey-darc-color, 2%);
+    }
+}

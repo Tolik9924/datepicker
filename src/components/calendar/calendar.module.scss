@@ -11,8 +11,6 @@
         "daysName"
         "days"
         "darkLightMode";
-    background: $calendarBackgroundDark;
-    color: $white;
     width: 16%;
     border-radius: 4%;
     margin-top: 10%;
@@ -20,6 +18,17 @@
     margin-right: auto;
     font-weight: $fw500;
     font-family: $baseFontFamily;
+    text-align: center;
+}
+
+.dark {
+    background: $calendarBackgroundDark;
+    color: $white; 
+}
+
+.light {
+    background: $calendarBackgroundLight;
+    color: $black; 
 }
 
 .monthYear {
