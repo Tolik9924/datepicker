@@ -6,6 +6,7 @@ import style from './calendar.module.scss';
 import Days from './Days/Days';
 import DaysName from './DaysName/DaysName';
 import MonthYear from './MonthYear/MonthYear';
+import RangeDays from './RangeDays/RangeDays';
 
 const Calendar = () => {
 
@@ -32,6 +33,9 @@ const Calendar = () => {
                     <Checkbox span={span}
                         onChange={() => setDarkLightMode(!darkLightMode)}
                         darkLightMode={darkLightMode} />
+                </div>
+                <div>
+                    <RangeDays darkLightMode={darkLightMode} />
                 </div>
             </div>
     );

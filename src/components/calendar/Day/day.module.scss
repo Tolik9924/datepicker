@@ -11,6 +11,14 @@
     border: solid;
 }
 
+.rangeDayLight {
+    background: $rangeDayBackgroundLight;
+}
+
+.rangeDayDark {
+    background: $rangeDayBackgroundDark ;
+}
+
 .todayDark {
     background: $lightDarkBlue;
     border-radius: 50%;

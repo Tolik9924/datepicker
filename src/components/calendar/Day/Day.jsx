@@ -1,6 +1,5 @@
 import classNames from 'classnames';
-import React, { useState } from 'react';
-import Days from '../Days/Days';
+import React from 'react';
 
 import style from './day.module.scss';
 
@@ -12,9 +11,13 @@ const Day = ({
 
     const modeToday = darkLightMode ? style.todayDark : style.todayLight;
     const todayStyle = day.today && modeToday;
+
     const chooseDayStyle = day.chooseDay && style.chooseDay;
 
-    const classProps = classNames(style.day, todayStyle, chooseDayStyle);
+    const modeRangeDay = darkLightMode ? style.rangeDayDark : style.rangeDayLight;
+    const rangeDayStyle = day.rangeDay && modeRangeDay;
+
+    const classProps = classNames(style.day, todayStyle, chooseDayStyle, rangeDayStyle);
 
     return (
         <div className={classProps}

@@ -5,12 +5,13 @@
 
 .calendar {
     display: grid;
-    grid-template: 0.3fr 0.3fr 0.5fr 0.1fr / 1fr;
+    grid-template: 0.3fr 0.3fr 0.5fr 0.1fr 0.3fr / 1fr;
     grid-template-areas:
         "monthYear"
         "daysName"
         "days"
-        "darkLightMode";
+        "darkLightMode"
+        "rangeDays";
     width: 16%;
     border-radius: 4%;
     margin-top: 10%;
@@ -50,4 +51,9 @@
 .darkLightMode {
     display: grid;
     grid-area: darkLightMode;
+}
+
+.rangeDays {
+    display: grid;
+    grid-area: rangeDays;
 }

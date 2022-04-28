@@ -1,0 +1,20 @@
+@import "../../../../packages/styles/background.scss";
+@import "../../../../packages/styles/colors.scss";
+
+.container {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr;
+    grid-template-areas: 
+        "inputRangeDays"
+        "buttonSubmit";
+}
+
+.inputRangeDays {
+    display: grid;
+    grid-area: inputRangeDays;
+}
+
+.buttonSubmit {
+    display: grid;
+    grid-area: buttonSubmit;
+}

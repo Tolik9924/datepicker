@@ -109,3 +109,47 @@
         box-shadow: 0px 2px 0 darken($grey-darc-color, 5%), 2px 4px 6px darken($grey-darc-color, 2%);
     }
 }
+
+.calendarLight {
+    color: $darkGrey;
+    background: lighten($calendarButtonBackgroundLight, 3%);  
+    border: 1px solid darken($calendarBorder, 2%);
+    box-shadow: 0px 2px 0 darken($calendarButtonBackgroundLight, 5%), 2px 4px 6px darken($calendarButtonBackgroundLight, 2%);
+
+    &:hover {
+        background: darken($calendarButtonBackgroundLight, 1.5%);
+        color: lighten($calendarButtonBackgroundLight, 18%);
+        text-shadow: -1px -1px 0 darken($calendarButtonBackgroundLight, 9.5%); 
+    }
+
+    &:disabled {
+        color: $grey-darc-color;
+        background: $white;
+        border-color: $grey-light-color;
+        cursor: default;
+        text-shadow: -1px -1px 0 darken($grey-darc-color, 9.5%);
+        box-shadow: 0px 2px 0 darken($grey-darc-color, 5%), 2px 4px 6px darken($grey-darc-color, 2%);
+    }
+}
+
+.calendarDark {
+    color: $white;
+    background: lighten($calendarButtonBackgroundDark, 3%);  
+    border: 1px solid darken($calendarBorderDark, 2%);
+    box-shadow: 0px 2px 0 darken($calendarButtonBackgroundDark, 5%), 2px 4px 6px darken($calendarButtonBackgroundDark, 2%);
+
+    &:hover {
+        background: darken($calendarButtonBackgroundDark, 1.5%);
+        color: lighten($calendarButtonBackgroundDark, 18%);
+        text-shadow: -1px -1px 0 darken($calendarButtonBackgroundDark, 9.5%); 
+    }
+
+    &:disabled {
+        color: $grey-darc-color;
+        background: $white;
+        border-color: $grey-light-color;
+        cursor: default;
+        text-shadow: -1px -1px 0 darken($grey-darc-color, 9.5%);
+        box-shadow: 0px 2px 0 darken($grey-darc-color, 5%), 2px 4px 6px darken($grey-darc-color, 2%);
+    }
+}
