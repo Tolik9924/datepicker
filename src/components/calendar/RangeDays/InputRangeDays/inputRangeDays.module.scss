@@ -1,20 +1,74 @@
 @import "../../../../packages/styles/background.scss";
 @import "../../../../packages/styles/colors.scss";
+@import "../../../../packages/styles/font.scss";
+@import "../../../../packages/styles/font-family.scss";
 
 .container {
     display: grid;
-    grid-template: 1fr 1fr / 1fr;
+    grid-template: 1fr 1fr 1fr 1.3fr / 1fr;
     grid-template-areas: 
-        "inputRangeDays"
+        "headerOfContainer"
+        "firstData"
+        "lastData"
         "buttonSubmit";
+    width: 10%;
+    border-radius: 4%;
+    font-weight: $fw500;
+    font-family: $baseFontFamily;
+    text-align: center;
+    position: absolute;
+    background: $calendarBackgroundLight;
+    top: 40%;
+    left: 20%;
 }
 
-.inputRangeDays {
+.dark {
+    background: $calendarBackgroundDark;
+    color: $white; 
+}
+
+.light {
+    background: $calendarBackgroundLight;
+    color: $black; 
+}
+
+.headerOfContainer {
     display: grid;
-    grid-area: inputRangeDays;
+    grid-template: 1fr / 1fr 0.1fr;
+    grid-template-areas: 
+        "nameOfContainer hideContainer";
+    grid-area: headerOfContainer;
+}
+
+.nameOfContainer {
+    display: grid;
+    grid-area: nameOfContainer;
+    padding-left: 15%;
+    font-size: $f24;
+    padding-top: 3%;
+}
+
+.hideContainer {
+    display: grid;
+    grid-area: hideContainer;
+}
+
+.firstData {
+    display: grid;
+    grid-area: firstData;
+    padding-top: 3%;
+    padding-left: 20%;
+}
+
+.lastData {
+    display: grid;
+    grid-area: lastData;
+    padding-top: 3%;
+    padding-left: 20%;
 }
 
 .buttonSubmit {
     display: grid;
     grid-area: buttonSubmit;
+    padding-top: 3%;
 }

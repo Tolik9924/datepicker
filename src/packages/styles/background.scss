@@ -4,19 +4,19 @@ $calendarBackgroundDark: $darkBlueColor;
 $calendarBackgroundLight: $lightYellow;
 $todayBackground: $lightDarkBlue;
 $rangeDayBackgroundLight: $blue;
-$rangeDayBackgroundDark: $darkRed;
+$rangeDayBackgroundDark: $grey5;
 
 // Button
 $primaryBackground: $blue;
 $successBackground: $green;
 $calendarButtonBackgroundLight: $darkOrange;
-$calendarButtonBackgroundDark: $lightDarkBlue;
+$calendarButtonBackgroundDark: $grey5;
 
 // Border Button
 $primaryBorder: $blue;
 $successBorder: $green;
 $calendarBorder: $darkOrange;
-$calendarBorderDark: $lightDarkBlue;
+$calendarBorderDark: $grey5;
 
 // Input
 $backgroundInput: $white;
@@ -31,3 +31,6 @@ $spanBackgroundFocus: $blue;
 //Border Span
 $borderSpan: $grey4;
 $borderSpanFocus: $blue1;
+
+//Toggle
+$toggleBackground: $blue;

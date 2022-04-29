@@ -8,18 +8,8 @@
     font-weight: 500;
     font-family: inherit;
     -webkit-appearance: none;
-    color:  $grey1;
     border: 0;
-    border-bottom: 1px solid $grey1;
-    background: $backgroundInput;
     transition: border .3s ease;
-    &::placeholder {
-        color: $grey2;
-    }
-    &:focus {
-        outline: none;
-        border-color: $borderInput;
-    }
 }
 
 .formGroup {
@@ -43,33 +33,22 @@
     & > .span {
         text-align: center;
         line-height: 25px;
-        color: $grey1;
-        background: $spanBackground;
-        border: 1px solid $borderSpan;
-        transition: background .3s ease, border .3s ease, color .3s ease;
-    }
-    &:focus-within {
-        & > .span {
-            color: $white;
-            background: $spanBackgroundFocus;
-            border-color: $borderSpanFocus;
-        }
     }
 }
 
 // Size Input
 .smallInput {
-    width: 5%;
+    width: 20%;
     font-size: 14px;
 }
 
 .mediumInput {
-    width: 10%;
+    width: 40%;
     font-size: 18px;
 }
 
 .largeInput {
-    width: 15%;
+    width: 60%;
     font-size: 24px;
 }
 
@@ -97,4 +76,68 @@
 .fullwidthSpan {
     padding: 24px 28px;
     font-size: 38px;
+}
+
+
+// Theme Input
+.primaryInput {
+    border-bottom: 1px solid $grey1;
+    background: $backgroundInput;
+    color: $grey1;
+    &::placeholder {
+        color: $grey2;
+    }
+    &:focus {
+        outline: none;
+        border-color: $borderInput;
+    }
+}
+
+.calendarLightInput {
+    border-bottom: 1px solid $calendarButtonBackgroundLight;
+    background: $calendarBackgroundLight;
+    color: $black;
+    &::placeholder {
+        color: $grey1;
+    }
+    &:focus {
+        outline: none;
+        border-color: $calendarButtonBackgroundLight;
+    }
+}
+
+// Theme Span
+.primarySpan {
+    color: $grey1;
+    background: $spanBackground;
+    border: 1px solid $borderSpan;
+    transition: background .3s ease, border .3s ease, color .3s ease;
+}
+
+.calendarLightSpan {
+    color: $white;
+    background: darken($calendarButtonBackgroundLight, 1.5%);
+    border: 1px solid darken($calendarButtonBackgroundLight, 1.5%);
+    transition: background .3s ease, border .3s ease, color .3s ease;
+}
+
+// Theme FormGroup
+.primaryFormGroup {
+    &:focus-within {
+        & > .span {
+            color: $white;
+            background: $spanBackgroundFocus;
+            border-color: $borderSpanFocus;
+        }
+    }
+}
+
+.calendarLightFormGroup {
+    &:focus-within {
+        & > .span {
+            color: $white;
+            background: $calendarButtonBackgroundLight;
+            border-color:$calendarButtonBackgroundLight;
+        }
+    }
 }

@@ -13,14 +13,16 @@ const Input = ({
     span,
     handleChange,
     size = 'medium',
-    placeholder = ''
+    placeholder = '',
+    theme = 'primary'
 }) => {
     
-    const classProps = classNames(style.input, style[`${size}Input`]);
-    const classSpan = classNames(style.span, style[`${size}Span`]);
+    const classFormGroup = classNames(style.formGroup, style[`${theme}FormGroup`]);
+    const classProps = classNames(style.input, style[`${size}Input`], style[`${theme}Input`]);
+    const classSpan = classNames(style.span, style[`${size}Span`], style[`${theme}Span`]);
     
     return(
-        <div className={style.formGroup}>
+        <div className={classFormGroup}>
         <div className={classSpan}>
             {Icon && <i>{<Icon />} </i>}
             {span && <span>{span}</span>}

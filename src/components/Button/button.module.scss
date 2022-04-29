@@ -136,7 +136,6 @@
     color: $white;
     background: lighten($calendarButtonBackgroundDark, 3%);  
     border: 1px solid darken($calendarBorderDark, 2%);
-    box-shadow: 0px 2px 0 darken($calendarButtonBackgroundDark, 5%), 2px 4px 6px darken($calendarButtonBackgroundDark, 2%);
 
     &:hover {
         background: darken($calendarButtonBackgroundDark, 1.5%);

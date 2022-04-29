@@ -10,7 +10,7 @@ const RangeDays = ({
     darkLightMode
 }) => {
 
-    const theme = darkLightMode ? 'calendarDark' : 'calendarLight';
+    const theme = darkLightMode ? 'calendarDark' : 'primary';
 
     const dispatch = useDispatch();
 

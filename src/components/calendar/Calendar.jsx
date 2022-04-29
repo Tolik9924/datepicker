@@ -8,9 +8,10 @@ import DaysName from './DaysName/DaysName';
 import MonthYear from './MonthYear/MonthYear';
 import RangeDays from './RangeDays/RangeDays';
 
-const Calendar = () => {
-
-    const [darkLightMode, setDarkLightMode] = useState(false);
+const Calendar = ({
+    darkLightMode,
+    setDarkLightMode
+}) => {
 
     const mode = darkLightMode ? style.dark : style.light;
 

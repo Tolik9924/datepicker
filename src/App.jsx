@@ -4,30 +4,33 @@ import './App.css';
 import Button from './components/Button/Button';
 import Calendar from './components/Calendar/Calendar';
 import InputRangeDays from './components/Calendar/RangeDays/InputRangeDays/InputRangeDays';
+import Input from './components/Input/Input';
+import Modal from './components/Modal/Modal';
 import { storeCalendar } from './store';
 
 const App = () => {
   
     const [showCalendar, setShowCalendar] = useState(false);
+    const [darkLightMode, setDarkLightMode] = useState(false);
 
     const styleButton = showCalendar ? 'buttonHide' : 'buttonShow';
 
     return (
     <div>   
-        {showCalendar 
-        &&
-        <Provider store={storeCalendar}>
-            <Calendar />
-        </Provider>}
-
-          <div className={styleButton}>
+          <div className={'buttonShow'}>
               <Button theme='primary' 
                       size='medium' 
-                      onClick={() => setShowCalendar(!showCalendar)}>
-                 {showCalendar ? 'Hide Calendar' : 'Show Calendar'}
+                      onClick={() => setShowCalendar(true)}>
+                 Show Calendar
               </Button>
           </div>
-          <InputRangeDays />
+            <Modal active={showCalendar} setActive={setShowCalendar}>
+                <Provider store={storeCalendar}>
+                    <Calendar darkLightMode={darkLightMode}
+                        setDarkLightMode={setDarkLightMode} />
+                    {/* <InputRangeDays darkLightMode={darkLightMode} /> */}
+                </Provider>
+            </Modal>
     </div>
   );
 }
