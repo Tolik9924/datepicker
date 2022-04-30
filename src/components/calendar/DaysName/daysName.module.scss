@@ -7,8 +7,8 @@
 }
 
 .dayName {
-    margin-top: 30px;
-    margin-bottom: 15px;
+    padding-top: 0%;
+    padding-bottom: 0%;
     font-size: $f18;
 }
 
@@ -18,4 +18,8 @@
 
 .light {
     color: $darkGrey;
+}
+
+.dayNameText {
+    margin-top: 30%;
 }

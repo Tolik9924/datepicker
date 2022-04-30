@@ -5,7 +5,7 @@
 
 .calendar {
     display: grid;
-    grid-template: 0.3fr 0.3fr 0.5fr 0.1fr 0.3fr / 1fr;
+    grid-template: 0.3fr 0.2fr 0.5fr 0.2fr 0.2fr / 1fr;
     grid-template-areas:
         "monthYear"
         "daysName"
@@ -16,7 +16,6 @@
     border-radius: 4%;
     margin-left: auto;
     margin-right: auto;
-    padding: 1% 1% 1% 1%;
     font-weight: $fw500;
     font-family: $baseFontFamily;
     text-align: center;
@@ -45,7 +44,6 @@
 .days {
     display: grid;
     grid-area: days;
-    grid-template: 1fr / 1fr;
 }
 
 .darkLightMode {

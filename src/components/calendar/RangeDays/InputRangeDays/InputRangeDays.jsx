@@ -1,19 +1,37 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '../../../Button/Button';
 import Input from '../../../Input/Input';
+import { useDispatch } from 'react-redux';
 
 import style from './inputRangeDays.module.scss';
+import { rangeDay } from '../../../../store/calendarReducer';
 
 const InputRangeDays = ({
     darkLightMode
 }) => {
 
+    const [firstData, setFirstData] = useState('');
+    const [lastData, setLastData] = useState('');
+
+    const dispatch = useDispatch();
+
     const mode = darkLightMode ? style.dark : style.light;
 
     const classRangeDays = classNames(style.container, mode);
 
-    const theme = darkLightMode ? 'calendarDark' : 'calendarLight';
+    const themeButton = darkLightMode ? 'calendarDark' : 'primary';
+    const themeInput = darkLightMode ? 'calendarDark' : 'calendarLight';
+
+    const handleChangeFirstData = (e) => {
+        e.preventDefault();
+        setFirstData(e.target.value);
+    }
+
+    const handleChangeLastData = (e) => {
+        e.preventDefault();
+        setLastData(e.target.value);
+    }
 
     return (
         <div className={classRangeDays}>
@@ -26,14 +44,23 @@ const InputRangeDays = ({
                 </div>
             </div>
             <div className={style.firstData}>
-                <Input span='First Day' size='small' theme='calendarLight' />
+                <Input span='First Day' size='small' 
+                       theme={themeInput}
+                       value={firstData}
+                       handleChange={handleChangeFirstData} />
             </div>
             <div className={style.lastData}>
-                <Input span='Last Day' size='small' theme='calendarLight' />
+                <Input span='Last Day' 
+                       size='small' 
+                       theme={themeInput} 
+                       value={lastData}
+                       handleChange={handleChangeLastData} />
             </div>
             <div className={style.buttonSubmit}>
                 <div>
-                    <Button size='medium' theme={theme}>
+                    <Button size='medium' 
+                            theme={themeButton}
+                            onClick={() => dispatch(rangeDay(firstData, lastData))}>
                         Submit
                     </Button>
                 </div>

@@ -94,7 +94,7 @@
 }
 
 .calendarLightInput {
-    border-bottom: 1px solid $calendarButtonBackgroundLight;
+    border-bottom: 1px solid #263f5a;
     background: $calendarBackgroundLight;
     color: $black;
     &::placeholder {
@@ -102,7 +102,20 @@
     }
     &:focus {
         outline: none;
-        border-color: $calendarButtonBackgroundLight;
+        border-color: #4471a2;
+    }
+}
+
+.calendarDarkInput {
+    border-bottom: 1px solid #263f5a;
+    background: $calendarBackgroundDark;
+    color: $white;
+    &::placeholder {
+        color: $grey1;
+    }
+    &:focus {
+        outline: none;
+        border-color: #4471a2;
     }
 }
 
@@ -116,8 +129,15 @@
 
 .calendarLightSpan {
     color: $white;
-    background: darken($calendarButtonBackgroundLight, 1.5%);
-    border: 1px solid darken($calendarButtonBackgroundLight, 1.5%);
+    background: #263f5a;
+    border: 1px solid #263f5a;
+    transition: background .3s ease, border .3s ease, color .3s ease;
+}
+
+.calendarDarkSpan {
+    color: $white;
+    background: #263f5a;
+    border: 1px solid #263f5a;
     transition: background .3s ease, border .3s ease, color .3s ease;
 }
 
@@ -126,8 +146,8 @@
     &:focus-within {
         & > .span {
             color: $white;
-            background: $spanBackgroundFocus;
-            border-color: $borderSpanFocus;
+            background: lighten($blue, 3%);
+            border-color: lighten($blue, 3%);
         }
     }
 }
@@ -136,8 +156,18 @@
     &:focus-within {
         & > .span {
             color: $white;
-            background: $calendarButtonBackgroundLight;
-            border-color:$calendarButtonBackgroundLight;
+            background: #4471a2;
+            border-color: #4471a2;
+        }
+    }
+}
+
+.calendarDarkFormGroup {
+    &:focus-within {
+        & > .span {
+            color: $white;
+            background: #4471a2;
+            border-color: #4471a2;
         }
     }
 }

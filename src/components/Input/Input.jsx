@@ -32,7 +32,8 @@ const Input = ({
                type={type}
                name={name}
                disabled={disabled}
-               onChange={handleChange}/>
+               onChange={handleChange}
+               value={value}/>
     </div>
     );
 }

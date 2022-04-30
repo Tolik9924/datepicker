@@ -24,10 +24,19 @@
 .modalContent {
     padding: 20px;
     border-radius: 12px;
-    background-color: $calendarBackgroundLight;
     transform: scale(0.5);
-    transition: 0.4s all;
-    width: none;
+    transition: 0.4s transform;
+    width: 100%;
+}
+
+.contentLight {
+   /*  background-color: $calendarBackgroundLight; */
+   background-color: white;
+}
+
+.contentDark {
+    /* background-color: $calendarBackgroundDark; */
+    background-color: white;
 }
 
 .activeContent{

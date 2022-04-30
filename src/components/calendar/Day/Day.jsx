@@ -10,9 +10,10 @@ const Day = ({
 }) => {
 
     const modeToday = darkLightMode ? style.todayDark : style.todayLight;
+    const modeChooseDay = darkLightMode ? style.chooseDayDark : style.chooseDayLight;
     const todayStyle = day.today && modeToday;
 
-    const chooseDayStyle = day.chooseDay && style.chooseDay;
+    const chooseDayStyle = day.chooseDay && modeChooseDay;
 
     const modeRangeDay = darkLightMode ? style.rangeDayDark : style.rangeDayLight;
     const rangeDayStyle = day.rangeDay && modeRangeDay;

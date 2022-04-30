@@ -7,6 +7,7 @@ import Days from './Days/Days';
 import DaysName from './DaysName/DaysName';
 import MonthYear from './MonthYear/MonthYear';
 import RangeDays from './RangeDays/RangeDays';
+import { BsMoonFill, BsSunFill } from 'react-icons/bs';
 
 const Calendar = ({
     darkLightMode,
@@ -17,7 +18,7 @@ const Calendar = ({
 
     const classMode = classNames(style.calendar, mode);
 
-    const span =  darkLightMode ? 'Dark Mode' : 'Light Mode';
+    const span =  darkLightMode ? <BsMoonFill /> : <BsSunFill />;
 
     return(
             <div className={classMode}>

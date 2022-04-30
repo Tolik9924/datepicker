@@ -19,9 +19,6 @@ const Days = ({
         dispatch(hideChooseDayAction(id));
     }
 
-    console.log(days);
-
-
     return (
         <div className={style.days}>
             {days.map((day) => {

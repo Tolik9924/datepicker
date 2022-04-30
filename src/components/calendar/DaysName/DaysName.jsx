@@ -16,7 +16,9 @@ const DaysName = ({
     return (
         <div className={classMode}>
             {daysName.map((dayName) => {
-                return <div key={dayName} className={style.dayName}> {dayName} </div>
+                return <div key={dayName} className={style.dayName}> 
+                            <div className={style.dayNameText}>{dayName}</div> 
+                        </div>
             })}
         </div>
     );

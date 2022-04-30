@@ -1,5 +1,6 @@
 @import "../../packages/styles/colors.scss";
 @import "../../packages/styles/background.scss";
+@import "../../packages/styles/font.scss";
 
 .chs {
 	height: 0px;
@@ -35,7 +36,7 @@
         width: 23px;
         height: 23px;
         border-radius: 90px;
-        transition: 0.3s;
+        transition: 0.4s;
     }
 
 }
@@ -54,5 +55,6 @@
 
 .span {
     display: block;
-    margin: 0% -8% -10% 10%;
+    margin: 0% -25% -12% 10%;
+    font-size: $f24;
 }
