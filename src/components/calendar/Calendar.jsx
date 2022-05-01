@@ -11,7 +11,8 @@ import { BsMoonFill, BsSunFill } from 'react-icons/bs';
 
 const Calendar = ({
     darkLightMode,
-    setDarkLightMode
+    setDarkLightMode,
+    setShowRangeDays
 }) => {
 
     const mode = darkLightMode ? style.dark : style.light;
@@ -37,7 +38,8 @@ const Calendar = ({
                         darkLightMode={darkLightMode} />
                 </div>
                 <div>
-                    <RangeDays darkLightMode={darkLightMode} />
+                    <RangeDays darkLightMode={darkLightMode}
+                               setShowRangeDays={setShowRangeDays} />
                 </div>
             </div>
     );

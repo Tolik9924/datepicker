@@ -8,7 +8,8 @@ import style from './inputRangeDays.module.scss';
 import { rangeDay } from '../../../../store/calendarReducer';
 
 const InputRangeDays = ({
-    darkLightMode
+    darkLightMode,
+    setShowRangeDays
 }) => {
 
     const [firstData, setFirstData] = useState('');
@@ -33,13 +34,21 @@ const InputRangeDays = ({
         setLastData(e.target.value);
     }
 
+    const submitRangeDays = () => {
+        dispatch(rangeDay(firstData, lastData));
+        setShowRangeDays(false);
+        setFirstData('');
+        setLastData('');
+    }
+
     return (
         <div className={classRangeDays}>
             <div className={style.headerOfContainer}>
                 <div className={style.nameOfContainer}>
                     Range Days
                 </div>
-                <div className={style.hideContainer}>
+                <div className={style.hideContainer}
+                     onClick={() =>  setShowRangeDays(false)}>
                     X
                 </div>
             </div>
@@ -60,7 +69,7 @@ const InputRangeDays = ({
                 <div>
                     <Button size='medium' 
                             theme={themeButton}
-                            onClick={() => dispatch(rangeDay(firstData, lastData))}>
+                            onClick={() => submitRangeDays()}>
                         Submit
                     </Button>
                 </div>

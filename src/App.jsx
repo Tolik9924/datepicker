@@ -8,31 +8,37 @@ import Modal from './components/Modal/Modal';
 import { storeCalendar } from './store';
 
 const App = () => {
-  
+
     const [showCalendar, setShowCalendar] = useState(false);
     const [showRangeDays, setShowRangeDays] = useState(false);
     const [darkLightMode, setDarkLightMode] = useState(false);
 
     return (
-    <div>   
-          <div className={'buttonShow'}>
-              <Button theme='primary' 
-                      size='medium' 
-                      onClick={() => setShowCalendar(true)}>
-                 Show Calendar
-              </Button>
-          </div>
-            <Modal active={showCalendar} 
-                   setActive={setShowCalendar}
-                   darkLightMode={darkLightMode}>
-                <Provider store={storeCalendar}>
+        <div>
+            <div className={'buttonShow'}>
+                <Button theme='primary'
+                    size='medium'
+                    onClick={() => setShowCalendar(true)}>
+                    Show Calendar
+                </Button>
+            </div>
+            <Provider store={storeCalendar}>
+                <Modal active={showCalendar}
+                    setActive={setShowCalendar}
+                    darkLightMode={darkLightMode}>
                     <Calendar darkLightMode={darkLightMode}
-                        setDarkLightMode={setDarkLightMode} />
-                    <InputRangeDays darkLightMode={darkLightMode} />
-                </Provider>
-            </Modal>
-    </div>
-  );
+                        setDarkLightMode={setDarkLightMode}
+                        setShowRangeDays={setShowRangeDays} />
+                </Modal>
+                <Modal active={showRangeDays}
+                        setActive={setShowRangeDays}
+                        darkLightMode={darkLightMode}>
+                    <InputRangeDays darkLightMode={darkLightMode}
+                                    setShowRangeDays={setShowRangeDays} />
+                </Modal>
+            </Provider>
+        </div>
+    );
 }
 
 export default App;

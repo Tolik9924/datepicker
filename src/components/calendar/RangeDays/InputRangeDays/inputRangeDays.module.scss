@@ -11,12 +11,11 @@
         "firstData"
         "lastData"
         "buttonSubmit";
-    width: 10%;
+    width: 220px;
     border-radius: 4%;
     font-weight: $fw500;
     font-family: $baseFontFamily;
     text-align: center;
-    position: absolute;
     background: $calendarBackgroundLight;
     top: 40%;
     left: 20%;
@@ -51,6 +50,13 @@
 .hideContainer {
     display: grid;
     grid-area: hideContainer;
+    cursor: pointer;
+    &:hover {
+        background: $blue;
+        color: $white;
+        height: 40%;
+        border-radius: 20%;
+    }
 }
 
 .firstData {

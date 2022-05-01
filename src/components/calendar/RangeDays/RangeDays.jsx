@@ -1,29 +1,18 @@
 import React from 'react';
 import Button from '../../Button/Button';
-import { useDispatch } from 'react-redux';
-
-import { rangeDay } from '../../../store/calendarReducer';
 
 import style from './rangeDays.module.scss';
 
 const RangeDays = ({
-    darkLightMode
+    darkLightMode,
+    setShowRangeDays
 }) => {
 
     const theme = darkLightMode ? 'calendarDark' : 'primary';
 
-    const dispatch = useDispatch();
-
-    const rangeDayFunc = () => {
-        const firstData = parseInt(prompt('Input First Data: '));
-        const lastData = parseInt(prompt('Input Last Data: '));
-
-        dispatch(rangeDay(firstData, lastData));
-    }
-
     return(
         <div className={style.rangeDays}>
-            <Button theme={theme} onClick={() => rangeDayFunc()}>
+            <Button theme={theme} onClick={() => setShowRangeDays(true)}>
                 Range Days
             </Button>
         </div>

@@ -26,17 +26,14 @@
     border-radius: 12px;
     transform: scale(0.5);
     transition: 0.4s transform;
-    width: 100%;
 }
 
 .contentLight {
-   /*  background-color: $calendarBackgroundLight; */
-   background-color: white;
+    background-color: $calendarBackgroundLight;
 }
 
 .contentDark {
-    /* background-color: $calendarBackgroundDark; */
-    background-color: white;
+    background-color: $calendarBackgroundDark;
 }
 
 .activeContent{
