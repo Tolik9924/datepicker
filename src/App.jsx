@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { Provider } from 'react-redux';
 import './App.css';
 import Button from './components/Button/Button';
-import Calendar from './components/Calendar/Calendar';
-import InputRangeDays from './components/Calendar/RangeDays/InputRangeDays/InputRangeDays';
+import Calendar from './components/calendar/Calendar';
+import InputRangeDays from './components/calendar/RangeDays/InputRangeDays/InputRangeDays';
 import Modal from './components/Modal/Modal';
 import { storeCalendar } from './store';
 
