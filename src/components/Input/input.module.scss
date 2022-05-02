@@ -129,15 +129,15 @@
 
 .calendarLightSpan {
     color: $white;
-    background: #263f5a;
-    border: 1px solid #263f5a;
+    background: $spanInputLight;
+    border: 1px solid $spanInputLight;
     transition: background .3s ease, border .3s ease, color .3s ease;
 }
 
 .calendarDarkSpan {
     color: $white;
-    background: #263f5a;
-    border: 1px solid #263f5a;
+    background: $spanInputDark;
+    border: 1px solid $spanInputDark;
     transition: background .3s ease, border .3s ease, color .3s ease;
 }
 
@@ -153,21 +153,9 @@
 }
 
 .calendarLightFormGroup {
-    &:focus-within {
-        & > .span {
-            color: $white;
-            background: #4471a2;
-            border-color: #4471a2;
-        }
-    }
+    
 }
 
 .calendarDarkFormGroup {
-    &:focus-within {
-        & > .span {
-            color: $white;
-            background: #4471a2;
-            border-color: #4471a2;
-        }
-    }
+    
 }
